@@ -29,7 +29,9 @@ const Profile = () => {
 
       })
 
-      dispatch(setUserPodcasts(userPodcastsDetails))
+      const correctUserPodcastsDetails = userPodcastsDetails.filter((podcast) => podcast.createBy === auth.currentUser.uid)
+
+      dispatch(setUserPodcasts(correctUserPodcastsDetails))
 
     },
     (error) =>{
@@ -167,7 +169,9 @@ const Profile = () => {
       <div className='userPodcasts'>
         {userPodcasts.map((podcast) =>(
 
-          <Podcast key={podcast.id} {...podcast} />
+           <Podcast key={podcast.id} {...podcast} />
+
+          
 
         ))}
       </div> }
