@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
 import Button from './Button/Button';
 import Input from './Input/Input';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, } from 'firebase/auth';
 import { auth,db } from '../firebase';
 import { getDoc,doc } from 'firebase/firestore';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../slices/UserSlice';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { sendPasswordResetEmail } from 'firebase/auth';
 const Login = () => {
     
   const [email,setEmail] = useState('');
@@ -62,13 +63,38 @@ setLoading(true);
 
 
   }
+
+  const handleResetPassword = async () =>{
+
+    try{
+
+      await sendPasswordResetEmail(auth,email);
+      toast.success("Check Email to Reset Password")
+
+    }
+    catch(error){
+
+      toast.error("Error while sending email" ,error)
+      console.log(error.message)
+
+    }
+
+
+  }
+
+
+
   return (
     <div className='input-wrapper'>
     
     <Input type="text" value={email} setValue={setEmail} placeholder="Email"/>
     <Input type="password" value={password} setValue={setPassword} placeholder="Password"/>
+
+    
     
     <Button text={loading?"loading":"Login"} onClick={handleLogin} disabled={loading}/>
+
+    <p style={{color:"grey"}} > Forget Your password ? <span onClick={handleResetPassword} style={{fontSize:"20px",cursor:"pointer",color:"white"}}>Reset Password</span></p>
   </div>
   )
 }
