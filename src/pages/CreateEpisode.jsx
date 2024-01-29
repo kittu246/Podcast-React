@@ -1,8 +1,11 @@
 import React from 'react'
+import Episode from '../components/Episode'
 
 const CreateEpisode = () => {
   return (
-    <div>CreateEpisode</div>
+    <div>
+      <Episode/>
+    </div>
   )
 }
 

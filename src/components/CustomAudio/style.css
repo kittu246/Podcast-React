@@ -1,0 +1,44 @@
+.custom-audio{
+    width:100vw;
+    background-color: rgb(46, 4, 85);
+    position: sticky;
+    left:0;
+    bottom:0;
+    display:flex;
+    align-items: center;
+    padding:1rem .5rem ;
+    justify-content: space-around;
+ 
+    gap:1rem;
+}
+.custom-audio img{
+
+    height:40px;
+    width:40px;
+   
+}
+
+.audio-div{
+    display: flex;
+    gap:1rem;
+  
+
+}
+.range-div{
+    display:flex;
+    gap:.5rem;
+}
+.range-div input{
+    filter:hue-rotate(35deg) ;
+    width:40vw
+}
+
+.volume-div{
+
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    /* position:absolute;
+    right:30px; */
+
+}

@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 const CreatePodcastForm = () => {
   const [title,setTitle] = useState('');
   const [desc,setDesc] = useState('');
-  const [displayImage,setDisplayImage] = useState(null);
+  const [displayImage,setDisplayImage] = useState(null); // we dont need to showinput value do notpassing custum input value prop
   const [broadImage,setBroadImage] = useState(null);
 
   const [loading,setLoading] = useState(false);
@@ -102,14 +102,12 @@ const CreatePodcastForm = () => {
   const handleBroadImage =(file) =>{
     setBroadImage(file);
   }
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
+
   return (
     <div className='input-wrapper'>
     <Input type="text" value={title} setValue={setTitle} placeholder="Title"/>
     <Input type="text" value={desc} setValue={setDesc} placeholder="Description"/>
-    {/* <Input type="file" value={smallImage} setValue={setPassword} placeholder="Password"/>
-    <Input type="password" value={confirmPassword} setValue={setConfirmPassword} placeholder="Confirm Password"/> */}
+  
     <CustomInput id={"choose-image"} text={"Add Podcast Image"} handleImage={handleDisplayImage}/>
     <CustomInput id={"choose-broad-image"} text={"Add Broad Image"} handleImage ={handleBroadImage}/>
     <Button text={loading ?"loading":"Create Podcast"} disabled={loading} onClick={handleCreatePodacst} />

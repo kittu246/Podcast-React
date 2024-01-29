@@ -11,7 +11,7 @@ const CustomInput = ({id,text,handleImage}) => {
     }
   return (
     <>
-    <label className={`customInput ${!fileSelected ? "labelColor" :"activeLabel"}`} htmlFor={id}>{fileSelected ? fileSelected :text}</label>
+    <label className={`customInput ${!fileSelected ? "labelColor" :"activeLabel"}`} htmlFor={id}>  {fileSelected ? fileSelected :text}  </label>
     <input type='file' id={id} style={{display:"none"}} onChange={handleSelectedFile} />
     </>
   )

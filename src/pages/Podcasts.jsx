@@ -3,10 +3,13 @@ import { collection, onSnapshot,query } from 'firebase/firestore'
 import { useDispatch, useSelector } from 'react-redux'
 import { db } from '../firebase'
 import { setPodcast } from '../slices/PodcastSlice'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import Podcast from '../components/Podcasts/Podcast'
+import Input from '../components/Input/Input'
 
 const Podcasts = () => {
+
+  const [userSearch,setuserSearch] = useState('');
 
   const dispatch = useDispatch();
   const {podcasts} = useSelector((state) =>  (state.podcasts))
@@ -38,15 +41,22 @@ const Podcasts = () => {
   },[dispatch])
 
 
+  const filteredPodcast = podcasts.filter((podcast) => {
+      return podcast.title.trim().toLowerCase().includes(userSearch.trim().toLowerCase())
+  } )// as in the start initial value of usersearch is '' , and empty string is present in all strings
+  
+
 
   return (
 
     <div className='podcasts'>
     <div className='input-wrapper'>
       <h1>Podcasts</h1>
-      {podcasts.length == 0 ? <div>No Podcasts</div> :
+
+      <Input type="text" value={userSearch} setValue={setuserSearch} placeholder="Search By Title"/>
+      {filteredPodcast.length == 0 ? <div>No Podcasts</div> :
       <div className='userPodcasts'>
-        {podcasts.map((podcast) =>(
+        {filteredPodcast.map((podcast) =>(
 
           <Podcast key={podcast.id} {...podcast} />
 

@@ -24,7 +24,7 @@ input{
   font-family: 'Inter', sans-serif;
 }
 
-.signUpsignIn,.createPodcast,.podcasts{
+.signUpsignIn,.createPodcast,.podcasts,.podcastDetails,.createEpisode,.profileName{
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,36 @@ input{
 
 .userPodcasts{
   display:flex;
+  gap:2rem;
   flex-wrap: wrap;margin-top: 2rem;
+  justify-content: center;
+}
+.podcastDetail{
+  width:100%;
+  height:100%;
+  border-radius: 20px;
+
+}
+
+.podcastDetail img{
+
+  width:100%;
+  height:40vh;
+  object-fit:cover;
+  border-radius: 20px;
+  background-position: top;
+background: linear-gradient(178deg, rgba(58, 129, 191, 0.30) 1.63%, rgba(65, 48, 90, 0.01) 148.18%);
+
+
+
+}
+
+.uploadProfileButton{
+
+ display:flex;
+ gap:20px;
+ align-items: center;
+ justify-content: center;
 }
 
 

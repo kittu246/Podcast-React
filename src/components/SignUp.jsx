@@ -28,7 +28,7 @@ const [name,setName] = useState('');
     if(password === confirmPassword && password.length>=6){
         try{
             const authUser =  await createUserWithEmailAndPassword(
-                auth,
+                auth,// t specifies we are in correct auth instance of the project
                 email,
                 password
             )
@@ -49,7 +49,7 @@ const [name,setName] = useState('');
 
               // seting user in redux 
 
-              dispatch(setUser({
+              dispatch(setUser({ 
                 name:name,// as name is not stored in user
                 email:user.email,
                 uid:user.uid,
