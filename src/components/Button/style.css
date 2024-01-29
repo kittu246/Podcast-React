@@ -1,0 +1,21 @@
+
+.custom-btn{
+
+   width: 80vw;
+    padding:.5rem 1rem;
+    color:white;
+    background-color: transparent;
+    margin: 1rem 0;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.custom-btn:hover{
+
+    color:#20062e;
+    background-color: white;
+    transition: all .3s;
+
+}

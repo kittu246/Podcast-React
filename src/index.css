@@ -1,0 +1,61 @@
+:root {
+ --theme :#20062e;
+ --blue :#18b2de;
+ --white:#fff;
+ --grey:#d7d7d7;
+ --purple--grey:#8f8297;
+
+
+}
+
+
+
+
+
+body {
+
+ 
+  background-color: var(--theme);
+  color:var(--white);
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+input{
+  font-family: 'Inter', sans-serif;
+}
+
+.signUpsignIn,.createPodcast,.podcasts{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.input-wrapper{
+
+  width:70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.userPodcasts{
+  display:flex;
+  flex-wrap: wrap;margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

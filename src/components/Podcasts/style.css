@@ -1,0 +1,46 @@
+.podcastCard{
+width: 193px;
+height: 242px;
+
+border-radius: 20px;
+background: linear-gradient(178deg, rgba(58, 129, 191, 0.30) 1.63%, rgba(65, 48, 90, 0.01) 148.18%);
+padding:10px ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+
+}
+.podcastCard:hover{
+    background-color: rgba(55, 127, 190, 0.3);
+    transition: all .3s;
+
+}
+
+.podcastCard img{
+    flex:9;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.link{
+
+    text-decoration: none;
+}
+
+.podcastCard p{
+    flex:1;
+
+    color: #91879C;
+    margin-left: .5rem;
+
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}

@@ -1,0 +1,24 @@
+
+.customInput{
+    width:77.5vw;;
+    padding:.5rem 1rem;
+    color:white;
+    background-color: transparent;
+    margin: .8rem 0;
+    border: 1.5px solid #8f8297;
+    border-radius: 5px;
+}
+.customInput:focus{
+    outline: none;
+    border-color: white;
+}
+.customInput::placeholder{
+    color:#8f8297;
+}
+
+.labelColor{
+    color:#8f8297;
+}
+.activeLabel{
+    border:1.5px solid white;
+}

@@ -1,0 +1,38 @@
+nav{
+
+    display:flex;
+    height:50px;
+    padding:10px;
+    align-items: center;
+    justify-content: center;
+    gap:1.7rem;
+  
+  
+  }
+  
+  .link{
+  
+    text-decoration: none;
+    color: var(--purple--grey);
+    font-weight: 600;
+  
+  }
+  .link:hover{
+    color: var(--white);
+    transition: all .3s;
+  }
+  .gradient{
+    width: 800px;
+  height: 150px;
+  flex-shrink: 0;
+  margin: auto;
+  background: #18B2DE;
+  filter: blur(90px);
+  position: absolute;
+  z-index:-1;
+  top:-110px;
+  }
+  
+  .active{
+    color:var(--white)
+  }
