@@ -1,7 +1,7 @@
 
 .custom-btn{
 
-   width: 64%;
+   width: 63%;
     padding:.5rem 1rem;
     color:white;
     background-color: transparent;
@@ -19,3 +19,16 @@
     transition: all .3s;
 
 }
+
+@media screen and (max-width:767px) {
+
+    .custom-btn{
+  
+     
+  
+        width: 66%;
+  
+  
+    }
+    
+  }

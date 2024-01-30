@@ -60,7 +60,7 @@ const Profile = () => {
     fontSize:'16px',
     cursor:'pointer'
    ,height:"15px",
-   backgroundColor:"transprent",
+   backgroundColor:"transparent",
    border:'1px solid white',
    color:"white",
    borderRadius:'5px',

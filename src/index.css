@@ -28,6 +28,7 @@ input{
   display:flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
 
 }
@@ -96,6 +97,19 @@ border: none;
   right:90px
 
 
+}
+
+@media screen and (max-width:767px) {
+
+  .logoutButton{
+
+   
+
+    right:10px
+
+
+  }
+  
 }
 
 

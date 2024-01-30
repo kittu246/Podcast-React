@@ -47,7 +47,7 @@ const CreatePodcastForm = () => {
 
     //step2  download the link 
 
-    const broadImageUrl = await getDownloadURL(displayImageRef);
+    const broadImageUrl = await getDownloadURL(broadImageRef);
 
      //step3  add in database
 
