@@ -79,8 +79,8 @@ const PodcastDetails = () => {
       fontSize:'16px',
       cursor:'pointer'
      ,height:"30px",
-     backgroundColor:"#20061e",
-     border:'2px solid white',
+     backgroundColor:"transparent",
+     border:'1px solid white',
      color:"white",
      borderRadius:'5px',
     

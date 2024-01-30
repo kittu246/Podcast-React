@@ -60,8 +60,8 @@ const Profile = () => {
     fontSize:'16px',
     cursor:'pointer'
    ,height:"15px",
-   backgroundColor:"#20061e",
-   border:'2px solid white',
+   backgroundColor:"transprent",
+   border:'1px solid white',
    color:"white",
    borderRadius:'5px',
   
@@ -153,13 +153,14 @@ const Profile = () => {
         <img src={user.profilePhoto?user.profilePhoto:Avatar}/>
         
     </div>
-    <p style={{fontSize:"25px", fontWeight:"600"}}>{user.profilePhoto?`Welcome ${user.name}`:"No Profile Photo"}</p>
+    {user.profilePhoto ? <p style={{fontSize:"25px", fontWeight:"600"}}>Welcome ${user.name}</p> : <p  style={{fontSize:"18px", color:"#8f8297"}}>No Profile Photo</p>}
+    {/* <p style={{fontSize:"25px", fontWeight:"600"}}>{user.profilePhoto?`Welcome ${user.name}`:"No Profile Photo"}</p> */}
 
 
      
 
       {!user.profilePhoto && <div className='uploadProfileButton'>
-      <CustomInput  id={"profile-photo"} text={"upload a profile"} handleImage={handleProfileUpload}/>
+      <CustomInput  id={"profile-photo"} text={"Add Profile Photo"} handleImage={handleProfileUpload}/>
        <button style={style} onClick={handleUploadProfile}> {loading ? "Loading...":"upload"} </button>
       </div>}
       
@@ -176,8 +177,11 @@ const Profile = () => {
         ))}
       </div> }
 
+
+      <button onClick={hangleLogout} className="logoutButton">Logout</button>
+
      
-      <Button  text="logout" onClick={hangleLogout}></Button>
+      {/* <Button  text="logout" onClick={hangleLogout}></Button> */}
 
     </div>
     </div>
